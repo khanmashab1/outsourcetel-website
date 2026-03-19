@@ -39,3 +39,24 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# logs and backups
+*.log
+*_log.txt
+*.txt
+.backup/
+empty_files.json
+!README.md
+!SECURITY.md
+!CONTRIBUTING.md
+!LICENSE
+!CAPS.md
+!AGENTS.md
+!CHANGELOG.md
+!CODE_OF_CONDUCT.md
+!PULL_REQUEST_TEMPLATE.md
+!ISSUE_TEMPLATE/*.md
+!.agent/
+!.agents/
+!_agent/
+!_agents/
