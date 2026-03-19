@@ -176,13 +176,10 @@ export function ServicesSection() {
         <AnimatedSection delay={0.4}>
           <div className="text-center mt-20">
             <Link href="/services">
-              <Button
-                size="xl"
-                className="btn-premium px-12 h-16 rounded-2xl font-black text-lg shadow-2xl group"
-              >
+              <button className="btn-premium px-12 h-16 rounded-2xl font-bold text-lg text-white group inline-flex items-center gap-3">
                 View Full Ecosystem
-                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-3 transition-transform" />
-              </Button>
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-3 transition-transform" />
+              </button>
             </Link>
           </div>
         </AnimatedSection>

@@ -6,99 +6,75 @@ import {
   ArrowRight,
   Play,
   CheckCircle,
-  Award,
   Globe,
   TrendingUp,
   Headphones,
   Star,
   Sparkles,
+  Shield,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 /**
- * OutsourceTel Hero Section - PREMIUM UPGRADE
+ * OutsourceTel Hero - VIVID COLOR COMBO
  */
 export function Hero() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.3 },
+      transition: { staggerChildren: 0.12, delayChildren: 0.2 },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+      transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
     },
   };
 
-  const floatingElements = [
-    {
-      icon: Headphones,
-      position: "top-[15%] left-[6%]",
-      delay: 0,
-      label: "500+ Agents",
-      color: "from-teal to-teal-600",
-    },
-    {
-      icon: Globe,
-      position: "top-[25%] right-[8%]",
-      delay: 1.5,
-      label: "30+ Partners",
-      color: "from-gold to-gold-600",
-    },
-    {
-      icon: TrendingUp,
-      position: "bottom-[30%] left-[10%]",
-      delay: 1,
-      label: "98% Retention",
-      color: "from-teal to-navy-500",
-    },
-    {
-      icon: Sparkles,
-      position: "bottom-[40%] right-[12%]",
-      delay: 2,
-      label: "Top Provider",
-      color: "from-gold to-teal",
-    },
-  ];
-
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-mesh-navy">
-      {/* Dynamic Glow Blobs */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div 
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 10, repeat: Infinity }}
-          className="absolute -top-[10%] -left-[10%] w-[60%] h-[60%] bg-teal/20 rounded-full blur-[120px]" 
-        />
-        <motion.div 
-          animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
-          transition={{ duration: 15, repeat: Infinity, delay: 2 }}
-          className="absolute -bottom-[20%] -right-[10%] w-[70%] h-[70%] bg-navy-surface/60 rounded-full blur-[150px]" 
-        />
-      </div>
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-mesh-hero">
+      {/* ── Living Orbs ── */}
+      <motion.div
+        animate={{ x: [0, 60, 0], y: [0, -40, 0], scale: [1, 1.15, 1] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-[5%] left-[5%] w-[500px] h-[500px] bg-teal/15 rounded-full blur-[100px] pointer-events-none"
+      />
+      <motion.div
+        animate={{ x: [0, -50, 0], y: [0, 50, 0], scale: [1, 1.1, 1] }}
+        transition={{ duration: 25, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+        className="absolute bottom-[10%] right-[5%] w-[600px] h-[600px] bg-lavender/10 rounded-full blur-[120px] pointer-events-none"
+      />
+      <motion.div
+        animate={{ x: [0, 30, 0], y: [0, -60, 0] }}
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 6 }}
+        className="absolute top-[40%] right-[30%] w-[300px] h-[300px] bg-gold/8 rounded-full blur-[80px] pointer-events-none"
+      />
 
-      {/* Grid Pattern Overlay with Fade */}
-      <div className="absolute inset-0 bg-dots opacity-20 mask-image:linear-gradient(to_bottom,black,transparent)" />
+      {/* ── Dot grid ── */}
+      <div className="absolute inset-0 bg-dots" />
 
-      {/* Floating Animated Badges (Desktop Only) */}
-      {floatingElements.map(({ icon: Icon, position, delay, label, color }, i) => (
+      {/* ── Floating Badges (2xl+) ── */}
+      {[
+        { icon: Headphones, label: "500+ Agents", pos: "top-[18%] left-[6%]", color: "from-teal to-teal-700", delay: 0 },
+        { icon: Globe, label: "30+ Partners", pos: "top-[22%] right-[7%]", color: "from-gold to-coral", delay: 1.5 },
+        { icon: TrendingUp, label: "98% Retention", pos: "bottom-[32%] left-[8%]", color: "from-lavender to-lavender/80", delay: 1 },
+        { icon: Sparkles, label: "Elite Provider", pos: "bottom-[38%] right-[10%]", color: "from-mint to-teal", delay: 2 },
+      ].map(({ icon: Icon, label, pos, color, delay }, i) => (
         <motion.div
           key={i}
-          className={`absolute ${position} hidden 2xl:flex items-center gap-3 glass-card px-4 py-2 rounded-2xl z-20`}
-          animate={{ y: [-12, 12, -12], rotate: [-1, 1, -1] }}
-          transition={{ duration: 6, delay, repeat: Infinity, ease: "easeInOut" }}
+          className={`absolute ${pos} hidden 2xl:flex items-center gap-3 glass-card-vivid px-5 py-3 rounded-2xl z-20`}
+          animate={{ y: [-10, 10, -10], rotate: [-1, 1, -1] }}
+          transition={{ duration: 7, delay, repeat: Infinity, ease: "easeInOut" }}
         >
-          <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center shadow-lg shadow-black/20`}>
+          <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center shadow-lg`}>
             <Icon className="w-5 h-5 text-white" />
           </div>
-          <span className="text-white/90 text-sm font-semibold tracking-wide">{label}</span>
-          <div className="absolute -inset-0.5 bg-gradient-to-br from-white/20 to-transparent rounded-2xl blur-sm opacity-50" />
+          <span className="text-white/90 text-sm font-semibold">{label}</span>
         </motion.div>
       ))}
 
@@ -109,96 +85,92 @@ export function Hero() {
           animate="visible"
           className="max-w-5xl mx-auto text-center"
         >
-          {/* Elite Badge */}
+          {/* ── Award Badge ── */}
           <motion.div variants={itemVariants} className="mb-8 flex justify-center">
-            <div className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl text-gold font-bold tracking-widest text-xs uppercase shadow-2xl">
+            <div className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full glass-card-vivid">
               <div className="flex -space-x-1">
                 {[1,2,3].map(i => <Star key={i} className="w-3.5 h-3.5 fill-gold text-gold" />)}
               </div>
-              <span className="text-white/80">Award-Winning BPO Provider 2024</span>
+              <span className="text-white/80 text-xs font-bold uppercase tracking-[0.2em]">
+                Award-Winning BPO Provider 2024
+              </span>
               <div className="flex -space-x-1">
                 {[1,2,3].map(i => <Star key={i} className="w-3.5 h-3.5 fill-gold text-gold" />)}
               </div>
             </div>
           </motion.div>
 
-          {/* Epic Headline */}
+          {/* ── Main Headline ── */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] mb-8 text-white"
+            className="font-heading text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold tracking-tight leading-[0.95] mb-8 text-white"
           >
             Boost Projections{" "}
-            <span className="relative inline-block text-gold text-glow-gold italic">
-              11X
-              <motion.div 
+            <span className="relative inline-block">
+              <span className="gradient-text">11X</span>
+              <motion.div
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
-                transition={{ duration: 1, delay: 1.5 }}
-                className="absolute -bottom-2 left-0 w-full h-2 bg-teal rounded-full" 
+                transition={{ duration: 1.2, delay: 1.5, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute -bottom-2 left-0 w-full h-1.5 bg-gradient-to-r from-teal via-lavender to-gold rounded-full origin-left"
               />
             </span>
             <br />
-            <span className="gradient-text font-black">OutsourceTel</span>
+            <span className="text-white/90">with </span>
+            <span className="gradient-text-subtle">OutsourceTel</span>
           </motion.h1>
 
-          {/* Premium Sub-text */}
+          {/* ── Sub-headline ── */}
           <motion.p
             variants={itemVariants}
-            className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto mb-12 leading-relaxed font-medium"
+            className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-12 leading-relaxed font-medium"
           >
-            Elite Business Process Outsourcing. Streamline operations, 
+            Elite Business Process Outsourcing. Streamline your operations,
             slash costs, and dominate your market with our certified formula.
           </motion.p>
 
-          {/* High-Impact Actions */}
+          {/* ── CTA Buttons ── */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16"
+            className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16"
           >
             <Link href="/booking">
-              <Button
-                size="xl"
-                className="btn-premium px-10 h-16 text-lg font-bold rounded-2xl group min-w-[240px]"
-              >
+              <button className="btn-premium px-10 h-16 text-lg font-bold rounded-2xl text-white group flex items-center gap-3 min-w-[260px] justify-center">
                 Schedule Consultation
-                <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-2 transition-transform" />
-              </Button>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+              </button>
             </Link>
             <Link href="/services">
-              <Button
-                size="xl"
-                variant="outline"
-                className="bg-white/5 hover:bg-white/10 border-white/20 text-white px-10 h-16 text-lg font-bold rounded-2xl backdrop-blur-xl transition-all"
-              >
-                <Play className="mr-3 w-6 h-6 fill-teal text-teal" />
-                Watch Formula
-              </Button>
+              <button className="btn-outline-premium px-10 h-16 text-lg font-bold rounded-2xl text-white flex items-center gap-3 min-w-[260px] justify-center group">
+                <Play className="w-5 h-5 fill-teal text-teal group-hover:scale-110 transition-transform" />
+                Watch Demo
+              </button>
             </Link>
           </motion.div>
 
-          {/* Trust Ecosystem */}
+          {/* ── Trust Row ── */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6"
+            className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4"
           >
             {[
-              { icon: CheckCircle, text: "24/7 Global Elite Ops" },
-              { icon: CheckCircle, text: "ISO 27001 Certified" },
-              { icon: CheckCircle, text: "Direct Executive Access" },
+              { icon: CheckCircle, text: "24/7 Global Operations", color: "text-teal" },
+              { icon: Shield, text: "ISO 27001 Certified", color: "text-lavender" },
+              { icon: CheckCircle, text: "Executive Access", color: "text-mint" },
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 group">
-                <div className="w-6 h-6 rounded-full bg-teal/20 flex items-center justify-center group-hover:bg-teal transition-colors">
-                  <item.icon className="w-4 h-4 text-teal group-hover:text-white" />
-                </div>
-                <span className="text-white/60 text-sm font-semibold tracking-wide uppercase">{item.text}</span>
+              <div key={i} className="flex items-center gap-2.5 group cursor-default">
+                <item.icon className={`w-5 h-5 ${item.color} opacity-70 group-hover:opacity-100 transition-opacity`} />
+                <span className="text-white/50 text-sm font-semibold uppercase tracking-wide group-hover:text-white/80 transition-colors">
+                  {item.text}
+                </span>
               </div>
             ))}
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Decorative Bottom Fade */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-background to-transparent" />
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }

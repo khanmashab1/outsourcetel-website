@@ -1,19 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle, BarChart3, Users, Lightbulb, Target, ArrowRight, ShieldCheck } from "lucide-react";
+import { CheckCircle, BarChart3, Users, Lightbulb, Target, ArrowRight, ShieldCheck, Star } from "lucide-react";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 
 /**
- * SaaS Specialization Section - PREMIUM ENHANCEMENT
+ * SaaS Specialization Section - VIVID PALETTE
  */
 export function SaaSSection() {
   const keyPoints = [
     { icon: BarChart3, text: "Leveraging deep SaaS expertise", color: "text-teal" },
-    { icon: Users, text: "Dedicated specialist teams", color: "text-gold" },
-    { icon: Target, text: "Tailored solutions for your stack", color: "text-teal" },
+    { icon: Users, text: "Dedicated specialist teams", color: "text-lavender" },
+    { icon: Target, text: "Tailored solutions for your stack", color: "text-mint" },
     { icon: Lightbulb, text: "Innovation-first approach", color: "text-gold" },
   ];
+
 
   return (
     <section className="py-32 bg-white relative overflow-hidden">
