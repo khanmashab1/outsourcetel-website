@@ -44,18 +44,18 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#0A1A2F] text-white">
+    <footer className="bg-[#111111] text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00A7B5] to-[#0082A0] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#DC2626] to-[#B91C1C] flex items-center justify-center">
                 <Phone className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold">
-                Outsource<span className="text-[#00A7B5]">Tel</span>
+                Outsource<span className="text-[#DC2626]">Tel</span>
               </span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
@@ -67,14 +67,14 @@ export function Footer() {
             <div className="space-y-3 mb-6">
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="flex items-center gap-3 text-sm text-white/60 hover:text-[#00A7B5] transition-colors"
+                className="flex items-center gap-3 text-sm text-white/60 hover:text-[#DC2626] transition-colors"
               >
                 <Mail className="w-4 h-4 flex-shrink-0" />
                 {siteConfig.contact.email}
               </a>
               <a
                 href={`tel:${siteConfig.contact.phone}`}
-                className="flex items-center gap-3 text-sm text-white/60 hover:text-[#00A7B5] transition-colors"
+                className="flex items-center gap-3 text-sm text-white/60 hover:text-[#DC2626] transition-colors"
               >
                 <Phone className="w-4 h-4 flex-shrink-0" />
                 {siteConfig.contact.phone}
@@ -96,7 +96,7 @@ export function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-white/50 hover:text-white hover:bg-[#00A7B5] transition-all duration-200"
+                  className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-white/50 hover:text-white hover:bg-[#DC2626] transition-all duration-200"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -112,7 +112,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/50 hover:text-[#00A7B5] transition-colors flex items-center gap-1 group"
+                    className="text-sm text-white/50 hover:text-[#DC2626] transition-colors flex items-center gap-1 group"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
                     {link.title}
@@ -130,7 +130,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/50 hover:text-[#00A7B5] transition-colors flex items-center gap-1 group"
+                    className="text-sm text-white/50 hover:text-[#DC2626] transition-colors flex items-center gap-1 group"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
                     {link.title}
@@ -148,7 +148,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/50 hover:text-[#00A7B5] transition-colors flex items-center gap-1 group"
+                    className="text-sm text-white/50 hover:text-[#DC2626] transition-colors flex items-center gap-1 group"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
                     {link.title}
@@ -162,7 +162,7 @@ export function Footer() {
               <h4 className="font-semibold text-white mb-3 text-sm uppercase tracking-wider">Get in Touch</h4>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#00A7B5] hover:bg-[#0095A2] text-white text-sm font-medium transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#DC2626] hover:bg-[#B91C1C] text-white text-sm font-medium transition-colors"
               >
                 Contact Sales
                 <ArrowRight className="w-4 h-4" />

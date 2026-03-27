@@ -52,6 +52,7 @@ export function Header() {
   }, [pathname]);
 
   const navItems = [
+    { title: "Home", href: "/" },
     {
       title: "Services",
       href: "/services",
@@ -63,6 +64,7 @@ export function Header() {
       dropdown: industriesDropdown,
     },
     { title: "About Us", href: "/about" },
+    { title: "Blog", href: "/blog" },
     { title: "Contact", href: "/contact" },
   ];
 
@@ -71,20 +73,20 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled
-          ? "bg-[#0A1A2F]/95 backdrop-blur-xl shadow-lg shadow-black/20 border-b border-white/5"
-          : "bg-[#0A1A2F]"
+          ? "bg-[#111111]/95 backdrop-blur-xl shadow-lg shadow-black/20 border-b border-white/5"
+          : "bg-[#111111]"
       )}
     >
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00A7B5] to-[#0082A0] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#DC2626] to-[#B91C1C] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
               <Phone className="w-5 h-5 text-white" />
             </div>
             <div>
               <span className="text-xl font-bold text-white tracking-tight">
-                Outsource<span className="text-[#00A7B5]">Tel</span>
+                Outsource<span className="text-[#DC2626]">Tel</span>
               </span>
             </div>
           </Link>
@@ -103,7 +105,7 @@ export function Header() {
                   className={cn(
                     "flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
                     pathname === item.href
-                      ? "text-[#00A7B5]"
+                      ? "text-[#DC2626]"
                       : "text-white/80 hover:text-white hover:bg-white/5"
                   )}
                 >
@@ -127,7 +129,7 @@ export function Header() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 8 }}
                         transition={{ duration: 0.15 }}
-                        className="absolute top-full left-0 mt-1 w-60 bg-[#0A1A2F] border border-white/10 rounded-xl shadow-2xl shadow-black/40 overflow-hidden"
+                        className="absolute top-full left-0 mt-1 w-60 bg-[#111111] border border-white/10 rounded-xl shadow-2xl shadow-black/40 overflow-hidden"
                       >
                         {item.dropdown.map((sub) => (
                           <Link
@@ -160,7 +162,7 @@ export function Header() {
             <Link href="/booking">
               <Button
                 size="sm"
-                className="bg-[#00A7B5] hover:bg-[#0095A2] text-white rounded-xl gap-2 font-semibold shadow-lg shadow-[#00A7B5]/20 transition-all duration-300 hover:shadow-[#00A7B5]/40"
+                className="bg-[#DC2626] hover:bg-[#B91C1C] text-white rounded-xl gap-2 font-semibold shadow-lg shadow-[#DC2626]/20 transition-all duration-300 hover:shadow-[#DC2626]/40"
               >
                 Get Started
                 <ArrowRight className="w-4 h-4" />
@@ -218,7 +220,7 @@ export function Header() {
                 ))}
                 <div className="pt-4 border-t border-white/10">
                   <Link href="/booking" className="block">
-                    <Button className="w-full bg-[#00A7B5] hover:bg-[#0095A2] text-white rounded-xl gap-2 font-semibold">
+                    <Button className="w-full bg-[#DC2626] hover:bg-[#B91C1C] text-white rounded-xl gap-2 font-semibold">
                       Get Started
                       <ArrowRight className="w-4 h-4" />
                     </Button>

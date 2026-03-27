@@ -15,27 +15,27 @@ const testimonials = [
     company: "TechScale Inc.",
     role: "CEO",
     content:
-      "Exceptional service. OutsourceTel doesn't just manage our SaaS team; they've integrated as a core growth engine. Our efficiency spiked 40% in just 90 days. Unmatched results.",
+      "Exceptional service! OutsourceTel goes above and beyond to meet their customers' needs. They've integrated as a core growth engine for our SaaS operations. Our efficiency spiked 40% in just 90 days. I couldn't be happier with the results.",
     rating: 5,
     initials: "NW",
     color: "from-teal to-teal-800",
   },
   {
     name: "Liam Patel",
-    company: "CloudOps Solutions",
+    company: "SwiftLogix",
     role: "Operations Director",
     content:
-      "Professionalism at its peak. The dispatch team recovered thousands in lost revenue by optimizing our logistics nodes. I recommend them to every major logistics player.",
+      "Outstanding quality and professionalism. I've been a loyal customer for years and have never been disappointed. Their team's expertise in streamlining our operations has been transformative for our business.",
     rating: 5,
     initials: "LP",
     color: "from-navy-surface to-navy-deep",
   },
   {
     name: "Olivia Martinez",
-    company: "GrowthHub Marketing",
-    role: "VP of Sales",
+    company: "OmniRetail",
+    role: "VP Customer Experience",
     content:
-      "Reliability is everything. Their offshore developers are consistently in the top 1% of talent we've ever hired. The ROI has been immediate and game-changing for our roadmap.",
+      "Reliable and trustworthy doesn't begin to describe OutsourceTel. I highly recommend this business to anyone looking for top-notch outsourcing solutions. Their 98% retention rate speaks for itself.",
     rating: 5,
     initials: "OM",
     color: "from-gold to-gold-800",

@@ -5,13 +5,10 @@ import Link from "next/link";
 import {
   ArrowRight,
   Play,
-  CheckCircle,
   Globe,
   TrendingUp,
   Headphones,
-  Star,
   Sparkles,
-  Shield,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -85,18 +82,14 @@ export function Hero() {
           animate="visible"
           className="max-w-5xl mx-auto text-center"
         >
-          {/* ── Award Badge ── */}
+          {/* ── Enterprise Badge ── */}
           <motion.div variants={itemVariants} className="mb-8 flex justify-center">
             <div className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full glass-card-vivid">
-              <div className="flex -space-x-1">
-                {[1,2,3].map(i => <Star key={i} className="w-3.5 h-3.5 fill-gold text-gold" />)}
-              </div>
+              <Sparkles className="w-4 h-4 text-teal" />
               <span className="text-white/80 text-xs font-bold uppercase tracking-[0.2em]">
-                Award-Winning BPO Provider 2024
+                Enterprise Specialization
               </span>
-              <div className="flex -space-x-1">
-                {[1,2,3].map(i => <Star key={i} className="w-3.5 h-3.5 fill-gold text-gold" />)}
-              </div>
+              <Sparkles className="w-4 h-4 text-teal" />
             </div>
           </motion.div>
 
@@ -105,9 +98,10 @@ export function Hero() {
             variants={itemVariants}
             className="font-heading text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold tracking-tight leading-[0.95] mb-8 text-white"
           >
-            Boost Projections{" "}
+            Empowering
+            <br />
             <span className="relative inline-block">
-              <span className="gradient-text">11X</span>
+              <span className="gradient-text">SaaS-Based</span>
               <motion.div
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
@@ -116,8 +110,7 @@ export function Hero() {
               />
             </span>
             <br />
-            <span className="text-white/90">with </span>
-            <span className="gradient-text-subtle">OutsourceTel</span>
+            <span className="text-white/90">Outsourcing.</span>
           </motion.h1>
 
           {/* ── Sub-headline ── */}
@@ -125,8 +118,8 @@ export function Hero() {
             variants={itemVariants}
             className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-12 leading-relaxed font-medium"
           >
-            Elite Business Process Outsourcing. Streamline your operations,
-            slash costs, and dominate your market with our certified formula.
+            OutsourceTel dominates the SaaS outsourcing landscape. Our elite workforce is engineered
+            to propel platform-based organizations to the absolute peak of service excellence.
           </motion.p>
 
           {/* ── CTA Buttons ── */}
@@ -134,9 +127,9 @@ export function Hero() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16"
           >
-            <Link href="/booking">
+            <Link href="/services">
               <button className="btn-premium px-10 h-16 text-lg font-bold rounded-2xl text-white group flex items-center gap-3 min-w-[260px] justify-center">
-                Schedule Consultation
+                Explore SaaS DNA
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </button>
             </Link>
@@ -148,22 +141,23 @@ export function Hero() {
             </Link>
           </motion.div>
 
-          {/* ── Trust Row ── */}
+          {/* ── Feature Pills ── */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4"
+            className="flex flex-wrap items-center justify-center gap-4"
           >
             {[
-              { icon: CheckCircle, text: "24/7 Global Operations", color: "text-teal" },
-              { icon: Shield, text: "ISO 27001 Certified", color: "text-lavender" },
-              { icon: CheckCircle, text: "Executive Access", color: "text-mint" },
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-2.5 group cursor-default">
-                <item.icon className={`w-5 h-5 ${item.color} opacity-70 group-hover:opacity-100 transition-opacity`} />
-                <span className="text-white/50 text-sm font-semibold uppercase tracking-wide group-hover:text-white/80 transition-colors">
-                  {item.text}
-                </span>
-              </div>
+              "Leveraging deep SaaS expertise",
+              "Dedicated specialist teams",
+              "Tailored solutions for your stack",
+              "Innovation-first approach",
+            ].map((feature, i) => (
+              <span
+                key={i}
+                className="px-5 py-2.5 bg-white/5 rounded-full text-sm text-white/60 border border-white/10 font-medium hover:bg-white/10 hover:text-white/80 transition-all cursor-default"
+              >
+                {feature}
+              </span>
             ))}
           </motion.div>
         </motion.div>
